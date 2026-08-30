@@ -45,7 +45,7 @@ export default function Navbar() {
 
                 </div>
                 <div className="hidden md:block">
-                    <Button size="sm">contact Me</Button>
+                    <Button size="sm"><a href="#contact">contact Me</a></Button>
                 </div>
 
                 <button className="md:hidden p-2 text-foreground" onClick={() => setmobilemenuopen((prev) => !prev)}>
@@ -59,11 +59,15 @@ export default function Navbar() {
                             <a
                                 key={link.href}
                                 href={link.href}
-                                className="text-lg text-muted-foreground hover:text-foreground py-2">
+                                className="text-lg text-muted-foreground hover:text-foreground py-2"
+                                onClick={() => setmobilemenuopen((prev) => !prev)}>
                                 {link.label}
+
                             </a>
                         ))}
-                        <Button size="sm">contact Me</Button>
+                        <a href="#contact" onClick={() => setmobilemenuopen((prev) => !prev)}>
+                            <Button size="sm">Contact Me</Button>
+                        </a>
 
                     </div>
                 </div>
